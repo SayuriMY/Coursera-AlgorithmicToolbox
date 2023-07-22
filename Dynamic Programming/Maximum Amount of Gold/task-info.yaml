@@ -31,6 +31,37 @@ files:
         if all_tests_passed:
             passed()
   learner_created: false
+- name: maximum_gold_unit_tests.py
+  visible: true
+  placeholders:
+  - offset: 278
+    length: 19
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 278
+    initialized_from_dependency: false
+    selected: true
+    status: Failed
+  text: |
+    import unittest
+    from maximum_gold import maximum_gold
+
+
+    class MaximumGold(unittest.TestCase):
+        def test(self):
+            for capacity, weights, answer in (
+                (10, (1, 4, 8), 9),
+                (20, (5, 7, 12, 18), 19),
+                (10, (3, 5, 3, 3, 5), 10),
+                type here
+            ):
+                self.assertEqual(maximum_gold(capacity, weights), answer)
+
+
+    if __name__ == '__main__':
+        unittest.main()
+  learner_created: false
 - name: maximum_gold.py
   visible: true
   placeholders:
@@ -62,37 +93,6 @@ files:
         assert len(input_weights) == n
 
         print(maximum_gold(input_capacity, input_weights))
-  learner_created: false
-- name: maximum_gold_unit_tests.py
-  visible: true
-  placeholders:
-  - offset: 278
-    length: 19
-    placeholder_text: type here
-    initial_state:
-      length: 9
-      offset: 278
-    initialized_from_dependency: false
-    selected: true
-    status: Failed
-  text: |
-    import unittest
-    from maximum_gold import maximum_gold
-
-
-    class MaximumGold(unittest.TestCase):
-        def test(self):
-            for capacity, weights, answer in (
-                (10, (1, 4, 8), 9),
-                (20, (5, 7, 12, 18), 19),
-                (10, (3, 5, 3, 3, 5), 10),
-                type here
-            ):
-                self.assertEqual(maximum_gold(capacity, weights), answer)
-
-
-    if __name__ == '__main__':
-        unittest.main()
   learner_created: false
 feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/nZrTS/programming-assignment-6-dynamic-programming-2/discussions
 status: Failed

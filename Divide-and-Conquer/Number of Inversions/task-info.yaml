@@ -15,7 +15,7 @@ files:
     initialized_from_dependency: false
     selected: true
     status: Unchecked
-  - offset: 845
+  - offset: 955
     length: 0
     placeholder_text: type here
     initial_state:
@@ -85,8 +85,8 @@ files:
 - name: number_of_inversions.py
   visible: true
   placeholders:
-  - offset: 759
-    length: 672
+  - offset: 1086
+    length: 1067
     placeholder_text: type here
     initial_state:
       length: 9

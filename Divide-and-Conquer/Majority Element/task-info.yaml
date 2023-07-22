@@ -3,42 +3,6 @@ files:
 - name: logo.png
   visible: false
   learner_created: false
-- name: majority_element.py
-  visible: true
-  placeholders:
-  - offset: 2148
-    length: 0
-    placeholder_text: type here
-    initial_state:
-      length: 9
-      offset: 268
-    initialized_from_dependency: false
-    selected: true
-    status: Failed
-  text: |
-    # python3
-
-
-    def majority_element_naive(elements):
-        assert len(elements) <= 10 ** 5
-        for e in elements:
-            if elements.count(e) > len(elements) / 2:
-                return 1
-
-        return 0
-
-
-    def majority_element(elements):
-        assert len(elements) <= 10 ** 5
-        type here
-
-
-    if __name__ == '__main__':
-        input_n = int(input())
-        input_elements = list(map(int, input().split()))
-        assert len(input_elements) == input_n
-        print(majority_element(input_elements))
-  learner_created: false
 - name: majority_element_unit_tests.py
   visible: true
   placeholders:
@@ -122,6 +86,42 @@ files:
 
         if all_tests_passed:
             passed()
+  learner_created: false
+- name: majority_element.py
+  visible: true
+  placeholders:
+  - offset: 2148
+    length: 0
+    placeholder_text: type here
+    initial_state:
+      length: 9
+      offset: 268
+    initialized_from_dependency: false
+    selected: true
+    status: Failed
+  text: |
+    # python3
+
+
+    def majority_element_naive(elements):
+        assert len(elements) <= 10 ** 5
+        for e in elements:
+            if elements.count(e) > len(elements) / 2:
+                return 1
+
+        return 0
+
+
+    def majority_element(elements):
+        assert len(elements) <= 10 ** 5
+        type here
+
+
+    if __name__ == '__main__':
+        input_n = int(input())
+        input_elements = list(map(int, input().split()))
+        assert len(input_elements) == input_n
+        print(majority_element(input_elements))
   learner_created: false
 feedback_link: https://www.coursera.org/learn/algorithmic-toolbox/programming/w9YDz/programming-assignment-4-divide-and-conquer/discussions
 status: Failed

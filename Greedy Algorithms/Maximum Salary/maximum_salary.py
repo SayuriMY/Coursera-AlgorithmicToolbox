@@ -67,12 +67,15 @@ def num_is_larger_than_max(max_num: str, num: str) -> bool:
 
 def largest_number(numbers: list) -> int:
     answer = ""
-    numbers.sort(reverse=True)
+    numbers.sort(reverse=True) # n log n
     while len(numbers) > 0:
         max_num = numbers[0]
         for i in range(1, len(numbers)):
+
             if len(max_num) != len(numbers[i]):
+
                 num_is_larger = num_is_larger_than_max(max_num, numbers[i])
+
                 if num_is_larger:
                     max_num = numbers[i]
             elif numbers[i] >= max_num:

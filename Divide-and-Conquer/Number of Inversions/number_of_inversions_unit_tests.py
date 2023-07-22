@@ -18,8 +18,10 @@ class TestNumberOfInversions(unittest.TestCase):
         for n in (10, 100):
             for max_value in (1, 2, 10, 10 ** 5):
                 array = [randint(0, max_value) for _ in range(n)]
-                self.assertEqual(compute_inversions(array),
-                                 compute_inversions_naive(array))
+                expected = compute_inversions_naive(array)
+                actual = compute_inversions(array)
+                print(f"{array} | expected: {expected} | actual: {actual}")
+                self.assertEqual(actual,expected)
 
     def test_large(self):
         self.assertEqual(compute_inversions([1] * 100), 0)
